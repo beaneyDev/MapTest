@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="f33-rg-cn2">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MapTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="3uc-yN-WKd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zRe-2V-cKa">
+                                <rect key="frame" x="8" y="58" width="359" height="571"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner.png" translatesAutoresizingMaskIntoConstraints="NO" id="Img-Gn-1LM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4fm-UT-iZZ"/>
+                                </constraints>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Dh3-Px-K41">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="blH-1a-FPB">
+                                <rect key="frame" x="8" y="637" width="22" height="22"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="switchTerrain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3ck-OK-WWc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="blH-1a-FPB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="0lw-es-Did"/>
+                            <constraint firstItem="zRe-2V-cKa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="3sq-lp-axU"/>
+                            <constraint firstItem="Dh3-Px-K41" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EHj-i7-leO"/>
+                            <constraint firstItem="zRe-2V-cKa" firstAttribute="top" secondItem="Img-Gn-1LM" secondAttribute="bottom" constant="8" id="G1f-T6-Q41"/>
+                            <constraint firstItem="blH-1a-FPB" firstAttribute="top" secondItem="zRe-2V-cKa" secondAttribute="bottom" constant="8" id="QJ4-U3-V9C"/>
+                            <constraint firstItem="Img-Gn-1LM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="VD9-up-uF5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="blH-1a-FPB" secondAttribute="bottom" constant="8" id="ZW8-Nt-RrZ"/>
+                            <constraint firstAttribute="trailing" secondItem="Img-Gn-1LM" secondAttribute="trailing" id="a2p-D4-XQf"/>
+                            <constraint firstAttribute="trailing" secondItem="zRe-2V-cKa" secondAttribute="trailing" constant="8" id="cJW-b2-aDk"/>
+                            <constraint firstItem="3uc-yN-WKd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dBi-xJ-Koi"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3uc-yN-WKd" secondAttribute="bottom" id="gVo-2T-hhz"/>
+                            <constraint firstAttribute="trailing" secondItem="3uc-yN-WKd" secondAttribute="trailing" id="ht7-vb-Hpb"/>
+                            <constraint firstItem="3uc-yN-WKd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="kJo-sm-cfe"/>
+                            <constraint firstItem="Dh3-Px-K41" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pox-Xo-Wjc"/>
+                            <constraint firstItem="Img-Gn-1LM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="y1F-Vs-fjH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="background" destination="3uc-yN-WKd" id="Ep4-yk-Nt0"/>
+                        <outlet property="map" destination="zRe-2V-cKa" id="uKP-pg-MAC"/>
+                        <outlet property="spinner" destination="Dh3-Px-K41" id="6Ot-0s-Ldk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="972" y="38.23088455772114"/>
+        </scene>
+        <!--Splash View Controller-->
+        <scene sceneID="0fw-MZ-yID">
+            <objects>
+                <viewController id="awj-sQ-xPU" customClass="SplashViewController" customModule="MapTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="S6e-wY-7xC"/>
+                        <viewControllerLayoutGuide type="bottom" id="ywu-lK-C86"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xfq-vl-D7l">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash.png" translatesAutoresizingMaskIntoConstraints="NO" id="Gbn-5k-gu3">
+                                <rect key="frame" x="0.0" y="-20" width="375" height="687"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="sVk-UY-Pfq">
+                                <rect key="frame" x="169" y="451" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ywu-lK-C86" firstAttribute="top" secondItem="sVk-UY-Pfq" secondAttribute="bottom" constant="179" id="8Iw-R8-WGv"/>
+                            <constraint firstItem="sVk-UY-Pfq" firstAttribute="centerX" secondItem="Xfq-vl-D7l" secondAttribute="centerX" id="AlG-cA-wUZ"/>
+                            <constraint firstItem="Gbn-5k-gu3" firstAttribute="top" secondItem="S6e-wY-7xC" secondAttribute="bottom" constant="-20" id="gwA-ed-XGw"/>
+                            <constraint firstItem="ywu-lK-C86" firstAttribute="top" secondItem="Gbn-5k-gu3" secondAttribute="bottom" id="i8F-MX-ukM"/>
+                            <constraint firstAttribute="trailing" secondItem="Gbn-5k-gu3" secondAttribute="trailing" id="lyW-Zv-dRV"/>
+                            <constraint firstItem="Gbn-5k-gu3" firstAttribute="leading" secondItem="Xfq-vl-D7l" secondAttribute="leading" id="oHh-QX-bbd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Vav-ha-scv"/>
+                    <connections>
+                        <outlet property="spinner" destination="sVk-UY-Pfq" id="bw1-Pn-agf"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="home" modalTransitionStyle="crossDissolve" id="VfO-oH-RGT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mk2-7f-XIg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="68" y="38.23088455772114"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ry4-Kz-vKe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="f33-rg-cn2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="T83-U0-Zjg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="awj-sQ-xPU" kind="relationship" relationship="rootViewController" id="duX-l6-G53"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yo6-dK-TmR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-871.20000000000005" y="37.331334332833585"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background.png" width="375" height="667"/>
+        <image name="banner.png" width="375" height="50"/>
+        <image name="splash.png" width="375" height="667"/>
+    </resources>
+</document>
